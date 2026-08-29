@@ -9,24 +9,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
- * Executes the commands for a set of cars on a field.
- *
- * <p>Design decision: commands are executed in <b>lock-step</b> — step 1 of
- * every car runs, then step 2 of every car runs, and so on — rather than
- * running each car's whole command string to completion one car at a time.
- * This is what makes two-car collisions well defined: a collision can only
- * be detected if both cars' positions are compared at the same point in
- * time. Running cars sequentially, one fully after another, would make
- * "collide at step 7" meaningless because the field would already be empty
- * or fully occupied depending on ordering.
- *
- * <p>Once a car collides it freezes (stops executing further commands) but
- * remains on the field, so a later car can still be detected crashing into
- * it. A car that runs off the edge of the field simply ignores that single
- * F command and keeps executing its remaining commands, per the problem
- * statement.
- */
 public class SimulationEngine {
 
     public void simulate(Field field, List<Car> cars) {

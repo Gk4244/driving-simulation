@@ -12,12 +12,7 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
- * Holds the current session's field and cars in memory and coordinates
- * running the {@link SimulationEngine}. A single instance is enough since
- * each run of the application is a brand-new process with a brand-new,
- * empty instance of this bean — nothing is persisted to disk or a database.
- */
+
 @Service
 public class SimulationService {
 

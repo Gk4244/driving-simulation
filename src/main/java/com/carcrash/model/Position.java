@@ -1,6 +1,5 @@
 package com.carcrash.model;
 
-/** An immutable (x, y) coordinate on the field. */
 public record Position(int x, int y) {
 
     public Position moved(int dx, int dy) {

@@ -4,11 +4,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-/**
- * A car placed on the field. Holds both its static setup (name, starting
- * position/direction, command string) and its mutable simulation state
- * (current position/direction, whether it has collided).
- */
 public class Car {
 
     private final String name;

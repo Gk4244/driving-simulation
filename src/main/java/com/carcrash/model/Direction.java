@@ -1,9 +1,5 @@
 package com.carcrash.model;
 
-/**
- * The four compass directions a car can face.
- * Ordered clockwise so that turnRight()/turnLeft() are simple index shifts.
- */
 public enum Direction {
     N, E, S, W;
 
