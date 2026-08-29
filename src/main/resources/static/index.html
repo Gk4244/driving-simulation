@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car Crash Simulation</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <main class="app">
+        <h1>🚗 Car Crash Simulation</h1>
+
+        <!-- Step 1: Field -->
+        <section id="field-section" class="card">
+            <h2>1. Create the field</h2>
+            <form id="field-form">
+                <label>Width <input type="number" id="field-width" min="1" value="10" required /></label>
+                <label>Height <input type="number" id="field-height" min="1" value="10" required /></label>
+                <button type="submit">Create field</button>
+            </form>
+            <p id="field-status" class="status"></p>
+        </section>
+
+        <!-- Step 2: Add cars -->
+        <section id="car-section" class="card" hidden>
+            <h2>2. Add cars</h2>
+            <form id="car-form">
+                <label>Name <input type="text" id="car-name" required /></label>
+                <label>X <input type="number" id="car-x" min="0" required /></label>
+                <label>Y <input type="number" id="car-y" min="0" required /></label>
+                <label>Direction
+                    <select id="car-direction">
+                        <option value="N">North</option>
+                        <option value="E">East</option>
+                        <option value="S">South</option>
+                        <option value="W">West</option>
+                    </select>
+                </label>
+                <label class="commands-label">Commands (L / R / F)
+                    <input type="text" id="car-commands" placeholder="e.g. FFRFFFFRRL" required />
+                </label>
+                <button type="submit">Add car</button>
+            </form>
+            <p id="car-status" class="status"></p>
+
+            <h3>Current cars</h3>
+            <table id="cars-table">
+                <thead><tr><th>Name</th><th>Position</th><th>Direction</th><th>Commands</th></tr></thead>
+                <tbody></tbody>
+            </table>
+
+            <div class="actions">
+                <button id="run-btn" disabled>Run simulation</button>
+                <button id="reset-btn" class="secondary">Start over</button>
+            </div>
+        </section>
+
+        <!-- Step 3: Results -->
+        <section id="results-section" class="card" hidden>
+            <h2>3. Results</h2>
+            <table id="results-table">
+                <thead><tr><th>Name</th><th>Result</th></tr></thead>
+                <tbody></tbody>
+            </table>
+            <div class="actions">
+                <button id="run-again-btn" class="secondary">Start over</button>
+            </div>
+        </section>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>

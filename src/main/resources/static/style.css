@@ -1,0 +1,107 @@
+* { box-sizing: border-box; }
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: #0f172a;
+    color: #e2e8f0;
+    margin: 0;
+    padding: 2rem 1rem;
+}
+
+.app {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.card {
+    background: #1e293b;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: flex-end;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.85rem;
+    gap: 0.3rem;
+    color: #94a3b8;
+}
+
+.commands-label {
+    flex: 1;
+    min-width: 220px;
+}
+
+input, select {
+    background: #0f172a;
+    border: 1px solid #334155;
+    color: #e2e8f0;
+    padding: 0.5rem;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+button {
+    background: #3b82f6;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+button:disabled {
+    background: #334155;
+    cursor: not-allowed;
+}
+
+button.secondary {
+    background: #334155;
+}
+
+.status {
+    min-height: 1.2rem;
+    font-size: 0.9rem;
+    margin-top: 0.6rem;
+}
+
+.status.error { color: #f87171; }
+.status.success { color: #4ade80; }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+th, td {
+    text-align: left;
+    padding: 0.5rem;
+    border-bottom: 1px solid #334155;
+    font-size: 0.9rem;
+}
+
+.actions {
+    margin-top: 1.2rem;
+    display: flex;
+    gap: 0.8rem;
+}
+
+.collision { color: #f87171; font-weight: 600; }
+.clean { color: #4ade80; }
